@@ -8,6 +8,7 @@ a {
     padding: 0;
     margin: 0;
     float: left;
+    margin-top: 15px;
 }
 
 table,
@@ -18,7 +19,6 @@ td {
     text-align: center;
     table-layout: fixed;
     word-break: break-all;
-    margin-top: 15px;
 }
 
 .POO {
