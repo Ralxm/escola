@@ -1,0 +1,78 @@
+a {
+    font-family: Arial;
+}
+
+#text1,
+#table1 {
+    width: calc(100%/2);
+    padding: 0;
+    margin: 0;
+    float: left;
+    margin-top: 15px;
+}
+
+table,
+th,
+td {
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    table-layout: fixed;
+    word-break: break-all;
+    background-color: white;
+}
+
+.POO {
+    background-color: rgba(244, 176, 132, 255);
+}
+
+.AS {
+    background-color: rgba(198, 224, 180, 255);
+}
+
+.AI1 {
+    background-color: rgba(180, 198, 231, 255);
+}
+
+.U {
+    background-color: rgba(255, 217, 102, 255);
+}
+
+.SO {
+    background-color: rgba(0, 176, 240, 255);
+}
+
+.dia-hoje{
+    font-size:15px;
+    font-family: Arial;
+}
+
+.MainTitle {
+    font-size: 35px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 15px;
+}
+
+.caixa-texto {
+    padding-bottom:10px;
+    padding-top:10px;
+    background-color: #64CCC5;
+    border-radius: 20px;
+}
+
+.caixa-titulo {
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    background-color: #176B87;
+    color: #04364A;
+    border: none;
+    vertical-align: middle;
+}
+
+.corpo {
+    background-color: #DAFFFB;
+}
