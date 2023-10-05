@@ -11,6 +11,12 @@
 
 <body class="corpo">
     <fieldset class="caixa-titulo">
+        <span class="dia-hoje">
+            <script type="text/javascript">
+                let weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturdar'][new Date().getDay()]
+                document.write("Today is: " + weekday);
+            </script>
+        </span>
         <center>
             <a class="MainTitle">
                 <strong>EI 2023/24</strong>
@@ -301,7 +307,7 @@
 
             </tr>
         </table>
-    </div>
+    </div>  
 </body>
 
 </html>
