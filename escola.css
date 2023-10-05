@@ -49,3 +49,21 @@ td {
 .subtitle {
     font-size: 15px;
 }
+
+.caixa-texto {
+    padding-bottom: 122px;
+    background-color: rgb(255, 124, 21);
+}
+
+.caixa-titulo {
+    border-radius: 20px;
+    border-width: 2px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 180, 0);
+    color: rgb(237, 70, 114);
+    border: none;
+}
+
+.corpo {
+    background-color: rgb(255, 218, 197);
+}
