@@ -19,6 +19,7 @@ td {
     text-align: center;
     table-layout: fixed;
     word-break: break-all;
+    background-color: white;
 }
 
 .POO {
@@ -41,6 +42,10 @@ td {
     background-color: rgba(0, 176, 240, 255);
 }
 
+.dia-hoje{
+    font-size:15px;
+}
+
 .MainTitle {
     font-size: 35px;
     text-align: center;
@@ -52,18 +57,19 @@ td {
 
 .caixa-texto {
     padding-bottom: 122px;
-    background-color: rgb(255, 124, 21);
+    background-color: #64CCC5;
 }
 
 .caixa-titulo {
     border-radius: 20px;
     border-width: 2px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
-    background-color: rgb(255, 180, 0);
-    color: rgb(237, 70, 114);
+    background-color: #176B87;
+    color: #04364A;
     border: none;
+    
 }
 
 .corpo {
-    background-color: rgb(255, 218, 197);
+    background-color: #DAFFFB;
 }
