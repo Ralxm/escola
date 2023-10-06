@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('/imagens/background.jpg') no-repeat;
+    background: url('/escola/imagens/background.jpg') no-repeat;
     background-size: cover;
     background-position: cover;
 }
