@@ -1,96 +1,62 @@
 <!DOCTYPE html>
 
-<style>
-    #texto1,
-    #texto2{
-        width: calc(100%/2);
-        padding: 0;
-        margin: 0;
-        float: left;
-        margin-top: 15px;
-    }
-    .botao-voltar{
-        background-color: #176B87;
-        margin-top: 30px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        padding-right: 10px;
-        padding-left: 10px;
-        border:none;
-        border-radius: 15px;
-        color:white;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-    }
-    .MainTitle {
-        font-size: 35px;
-        text-align: center;
-    }
-    .caixa-titulo{
-        border-radius: 20px;
-        border-width: 2px;
-        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
-        background-color: #176B87;
-        color: #04364A;
-        border: none;
-        vertical-align: middle;
-    }
-    .corpo {
-        background-color: #DAFFFB;
-    }
-    .caixa-texto {
-        padding-bottom:10px;
-        padding-top:10px;
-        background-color: #64CCC5;
-        border-radius: 20px;
-    }
-</style>
-
 <html>
     <title>
-        Sistemas Operativos
+        AI1
     </title>
+    
+    <head>
+        <link rel="stylesheet" href="/escola.css">
+    </head>
 
-    <body class="corpo">
-        <fieldset class="caixa-titulo">
-            <center>
-                <a class="MainTitle">
-                    <strong>Sistemas Operativos</strong>
-                </a><br>
-            </center>
-        </fieldset>
-        
-        <div id="texto1">
+    <body>
+        <header>
+            <h2 class="logo"> 
+                Sistemas Operativos&nbsp;&nbsp;
+                    <span class="dia-hoje">
+                        <script type="text/javascript">
+                            let weekday = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'][new Date().getDay()]
+                            let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
+                            let monthNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'][new Date().getMonth()]
+                            const date = new Date();
+                            document.write(weekday + "&nbsp;&nbsp;&nbsp;" + date.getDate() + "-" + monthNumber + "-" + date.getFullYear());
+                            document.write('&nbsp;&nbsp;&nbsp;')
+                            document.write(date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds())
+                        </script>
+                    </span>
+            </h2>
+            <nav class="navigation">
+                <a href="https://www.estgv.ipv.pt/estgv/" target="_blank">ESTGV</a>
+                <button class="btnHorario" onclick="window.location.href='/escola.html'" id="btn">Voltar</button>
+            </nav>
+        </header>
+
+        <div class="text1">
             <fieldset class="caixa-texto">
-                <p>
-                    O que falta fazer?
-                </p>
+                Frequências e trabalhos
                 <ul>
                     <li>
-                        Ponto 1
+                        x - x
+                    </li>
+                    <li>
+                        x - x
                     </li>
                 </ul>
             </fieldset>
         </div>
 
-        <div id="texto2">
+        <div class="text2">
             <fieldset class="caixa-texto">
-                <p>
-                    O que vamos fazer?
-                </p>
+                Coisas para fazer
                 <ul>
                     <li>
-                        Ponto 1
+                        x
+                    </li>
+                    <li>
+                        x
                     </li>
                 </ul>
             </fieldset>
         </div>
-        
-        <center>
-            <button onclick="window.location.href='/escola/escola.html'" class="botao-voltar">
-                Voltar
-            </button>
-        </center>
-
     </body>
 </html>
