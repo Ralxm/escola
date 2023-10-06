@@ -7,38 +7,326 @@
 
 <head>
     <link rel="stylesheet" href="escola.css">
+    <link rel="stylesheet" href="horario.css">
 </head>
 
-<body class="corpo">
-    <fieldset class="caixa-titulo">
-        <center>
-            <a class="MainTitle">
-                <strong>EI 2023/24</strong>
-            </a><br>
-        </center>
-    </fieldset>
-    
+<body>
+    <header>
+        <h2 class="logo"> 
+            EI 2023/24&nbsp;&nbsp;
+                <span class="dia-hoje">
+                    <script type="text/javascript">
+                        let weekday = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'][new Date().getDay()]
+                        let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
+                        let monthNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'][new Date().getMonth()]
+                        const date = new Date();
+                        document.write(weekday + "&nbsp;&nbsp;&nbsp;" + date.getDate() + "-" + monthNumber + "-" + date.getFullYear());
+                        document.write('&nbsp;&nbsp;&nbsp;')
+                        document.write(date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds())
+                    </script>
+                </span>
+        </h2>
+        <nav class="navigation">
+            <a href="https://www.estgv.ipv.pt/estgv/" target="_blank">ESTGV</a>
+            <button class="btnHorario" onclick="hide()" id="btn">Horário</button>
+        </nav>
+    </header>
 
-    <div id="text1">
+    <script type="text/javascript"> 
+        function hide(){
+            var x = document.getElementById("wrap");
+            var y = document.getElementById("caixa-texto1");
+            var btn = document.getElementById("btn");
+            if(x.style.display === "none"){
+                x.style.display = "block";
+                y.style.display = "none"; 
+            }
+            else{
+                x.style.display = "none"
+                y.style.display = "block";
+            }
+            if(btn.innerHTML === "Horário"){
+                btn.innerHTML = "UCs";
+            }
+            else{
+                btn.innerHTML = "Horário";
+            }
+        }
+    </script>
+    <div class="wrapper" id="wrap" style="display: none">
+        <div class="horario">
+            <table cellspacing="1px;">
+                <tr>
+                    <th class="smoll">
+                        Horas
+                    </th>
+                    <th>
+                        Segunda
+                    </th>
+                    <th>
+                        Terça
+                    </th>
+                    <th>
+                        Quarta
+                    </th>
+                    <th>
+                        Quinta
+                    </th>
+                    <th>
+                        Sexta
+                    </th>
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        9:00
+                    </td>
+                    <td rowspan="4" class="AI1">
+                        AI1&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L3
+                    </td>
+                    <td rowspan="4" class="POO">
+                        POO&nbsp;-&nbsp;TP2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L5
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        9:30
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        10:00
+                    </td>
+                    <td style="border:0px;">
+    
+                    </td>
+                    <td rowspan="6" class="SO">
+                        SO&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LR1
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        10:30
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        11:00
+                    </td>
+                    <td rowspan="4" class="U">
+                        U&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L3
+                    </td>
+                    <td rowspan="4" class="AS">
+                        AS&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L8
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        11:30
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        12:00
+                    </td>
+                    <td rowspan="3" class="SO">
+                        SO&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        12:30
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        13:00
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        13:30
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        14:00
+                    </td>
+                    <td rowspan="4" class="AS">
+                        AS&nbsp;-&nbsp;TP2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L8
+                    </td>
+                    <td rowspan="4" class="POO">
+                        POO&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L3
+                    </td>
+                    <td style="border:0px">
+                    </td>
+                    <td rowspan="3" class="AS">
+                        AS&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        14:30
+                    </td>
+                    <td rowspan="3" class="AI1">
+                        AI1&nbsp;-&nbsp;T1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        15:00
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        15:30
+                    </td>
+                    <td rowspan="3" class="U">
+                        U&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        16:00
+                    </td>
+                    <td style="border:0px;">
+                    </td>
+                    <td style="border:0px">
+                    </td>
+                    <td rowspan="4" class="AI1">
+                        AI1&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LR2
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        16:30
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        17:00
+                    </td>
+                    <td style="border:0px">
+                    </td>
+                    <td style="border:0px;">
+                    </td>
+                    <td rowspan="3" class="POO">
+                        POO&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        17:30
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        18:00
+                    </td>
+    
+                </tr>
+    
+                <tr>
+                    <td class="smoll">
+                        18:30
+                    </td>
+    
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="caixa-texto1"> 
         <fieldset class="caixa-texto">
-            <center>
-                <strong>
-                    <span class="dia-hoje">
-                        <script type="text/javascript">
-                            let weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][new Date().getDay()]
-                            let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
-                            let monthNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'][new Date().getMonth()]
-                            const date = new Date();
-                            document.write(weekday + " " + date.getDate() + "-" + monthNumber + "-" + date.getFullYear());
-                            document.write('<br>')
-                            document.write(date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds())
-                            //document.write('<br>')
-                            //document.write(date)
-                        </script>
-                    </span>
-                </strong>
-            </center>
+            <span class="subtitle">
+                Unidades curriculares:
+            </span>
+            <ul>
+                <li>
+                    <a href="/uc/AI1.html">
+                        Aplicações para a Internet&nbsp;1
+                    </a>
+                    &nbsp;&dash;&nbsp;
+                    <a href="https://moodle.estgv.ipv.pt/course/view.php?id=6456" target="_blank">
+                        Moodle
+                    </a>
+                </li>
+                <br><br>
+                <li>
+                    <a href="/uc/POO.html">
+                        Programação Orienta a Objetos
+                    </a>
+                    &nbsp;&dash;&nbsp;
+                    <a href="https://moodle.estgv.ipv.pt/course/view.php?id=6455" target="_blank">
+                        Moodle
+                    </a>
+                </li>
+                <br><br>
+                <li>
+                    <a href="/uc/AS.html">
+                        Análise de Sistemas
+                    </a>
+                    &nbsp;&dash;&nbsp;
+                    <a href="https://moodle.estgv.ipv.pt/course/view.php?id=6110" target="_blank">
+                        Moodle
+                    </a>
+                </li>
+                <br><br>
+                <li>
+                    <a href="/uc/SO.html">
+                        Sistemas Operativos
+                    </a>
+                    &nbsp;&dash;&nbsp;
+                    <a href="https://moodle.estgv.ipv.pt/course/view.php?id=6489" target="_blank">
+                        Moodle
+                    </a>
+                </li>
+                <br><br>
+                <li>
+                    <a href="/uc/U.html">
+                        Usabilidade
+                    </a>
+                    &nbsp;&dash;&nbsp;
+                    <a href="https://moodle.estgv.ipv.pt/course/view.php?id=6597" target="_blank">
+                        Moodle
+                    </a>
+                </li>
+            </ul>
         </fieldset>
+    </div>
+    <!--<div id="text1">
         <fieldset class="caixa-texto">
             <center>
                 <a class="subtitle">
@@ -104,226 +392,13 @@
                     Frequências e trabalhos:
                 </a>
             </center>
-            <ul> <!--&check; &cross;-->
+            <ul>
                 <li>
                     Sistemas Operativos (Freq) - 15 novembro
                 </li>
             </ul>
         </fieldset>
-    </div>
-
-    <div id=table1>
-        <table cellspacing="1px;">
-            <tr>
-                <th>
-                    Horas
-                </th>
-                <th>
-                    Segunda
-                </th>
-                <th>
-                    Terça
-                </th>
-                <th>
-                    Quarta
-                </th>
-                <th>
-                    Quinta
-                </th>
-                <th>
-                    Sexta
-                </th>
-            </tr>
-
-            <tr>
-                <td>
-                    9:00
-                </td>
-                <td rowspan="4" class="AI1">
-                    AI1&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L3
-                </td>
-                <td rowspan="4" class="POO">
-                    POO&nbsp;-&nbsp;TP2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L5
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    9:30
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    10:00
-                </td>
-                <td style="border:0px;">
-
-                </td>
-                <td rowspan="6" class="SO">
-                    SO&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LR1
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    10:30
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    11:00
-                </td>
-                <td rowspan="4" class="U">
-                    U&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L3
-                </td>
-                <td rowspan="4" class="AS">
-                    AS&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L8
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    11:30
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    12:00
-                </td>
-                <td rowspan="3" class="SO">
-                    SO&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    12:30
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    13:00
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    13:30
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    14:00
-                </td>
-                <td rowspan="4" class="AS">
-                    AS&nbsp;-&nbsp;TP2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L8
-                </td>
-                <td rowspan="4" class="POO">
-                    POO&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L3
-                </td>
-                <td style="border:0px">
-                </td>
-                <td rowspan="3" class="AS">
-                    AS&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    14:30
-                </td>
-                <td rowspan="3" class="AI1">
-                    AI1&nbsp;-&nbsp;T1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    15:00
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    15:30
-                </td>
-                <td rowspan="3" class="U">
-                    U&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    16:00
-                </td>
-                <td style="border:0px;">
-                </td>
-                <td style="border:0px">
-                </td>
-                <td rowspan="4" class="AI1">
-                    AI1&nbsp;-&nbsp;P2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LR2
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    16:30
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    17:00
-                </td>
-                <td style="border:0px">
-                </td>
-                <td style="border:0px;">
-                </td>
-                <td rowspan="3" class="POO">
-                    POO&nbsp;-&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A2
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    17:30
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    18:00
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    18:30
-                </td>
-
-            </tr>
-        </table>
-    </div>  
+    </div>-->
 </body>
 
 </html>
