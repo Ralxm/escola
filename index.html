@@ -16,6 +16,33 @@
             EI 2023/24&nbsp;&nbsp;
                 <span class="dia-hoje">
                     <script type="text/javascript">
+                        const date = new Date();
+                        function hours(){
+                            if(date.getHours() < 10){
+                                let a = '0' + date.getHours().toString();
+                            }
+                        }
+                        function minutes(){
+                            if(date.getMinutes() < 10){
+                                let a = '0' + date.getMinutes().toString();
+                            }
+                            return a;
+                        }
+                        function seconds(){
+                            if(date.getSeconds() < 10){
+                                let a = '0' + date.getSeconds().toString();
+                            }
+                            return a;
+                        }
+                        
+                        let weekday = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'][date.getDay()]
+                        let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
+                        let monthNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'][date.getMonth()]
+                        document.write(weekday + "&nbsp;&nbsp;&nbsp;" + date.getDate() + "-" + monthNumber + "-" + date.getFullYear());
+                        document.write('&nbsp;&nbsp;&nbsp;')
+                        document.write(hours + ":" + minutes + ":" + seconds)
+                    </script>
+                    <!--<script type="text/javascript">
                         let weekday = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'][new Date().getDay()]
                         let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
                         let monthNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'][new Date().getMonth()]
@@ -23,7 +50,7 @@
                         document.write(weekday + "&nbsp;&nbsp;&nbsp;" + date.getDate() + "-" + monthNumber + "-" + date.getFullYear());
                         document.write('&nbsp;&nbsp;&nbsp;')
                         document.write(date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds())
-                    </script>
+                    </script>-->
                 </span>
         </h2>
         <nav class="navigation">
